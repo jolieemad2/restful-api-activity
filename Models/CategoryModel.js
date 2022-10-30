@@ -1,8 +1,10 @@
-var mongoose=require('mongoose');
- 
+var mongoose = require("mongoose");
+
 var CategoryModel = new mongoose.Schema({
-    Name:String
+  Name: {
+    type: String,
+    required: true,
+  },
 });
- 
-module.exports = mongoose.model(
-    'category', CategoryModel, 'category');
+
+module.exports = mongoose.model("category", CategoryModel, "category");
